@@ -54,10 +54,24 @@ TBC.
 <!-- USAGE EXAMPLES -->
 ## Usage
 
-Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
+### flysim
 
-_For more examples, please refer to the [Documentation](https://example.com)_
+Neural network simulator: https://www.frontiersin.org/10.3389/conf.fninf.2014.18.00043/event_abstract
 
+### equilibrium_points
+Performs parameter sweep for a given neural circuit. Run --- to generate .pro and .conf files, ``./ss_flysim.sh`` to run flysim, ---.
+
+### CPG
+
+Performs parameter sweep for a given neural circuit.
+
+### functions
+
+Generates some of the functions of a CRIREL circuit.
+
+### large-network
+
+Generates a 100 neuron network.
 
 <!-- ROADMAP -->
 ## Roadmap
