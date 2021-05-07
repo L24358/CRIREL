@@ -31,7 +31,17 @@
   <ol>
     <li><a href="#about-the-project">About The Project</a></li>
     <li><a href="#getting-started">Getting Started</a></li>
-    <li><a href="#usage">Usage</a></li>
+    <li>
+      <a href="#usage">Usage</a>
+      <ul>
+        <li><a href="#flysim">flysim</a></li>
+        <li><a href="#equilibrium_points">equilibrium_points</a></li>
+        <li><a href="#CPG">CPG</a></li>
+        <li><a href="#bistable_decision">bistable_decision</a></li>
+        <li><a href="#functions">functions</a></li>
+        <li><a href="#large_network">large_network</a></li>
+      </ul>
+    </li>
     <li><a href="#roadmap">Roadmap</a></li>
     <li><a href="#license">License</a></li>
     <li><a href="#contact">Contact</a></li>
@@ -59,17 +69,22 @@ TBC.
 Neural network simulator: https://www.frontiersin.org/10.3389/conf.fninf.2014.18.00043/event_abstract
 
 ### equilibrium_points
+
 Performs parameter sweep for a given neural circuit. Run --- to generate .pro and .conf files, ``./ss_flysim.sh`` to run flysim, ---.
 
 ### CPG
 
 Performs parameter sweep for a given neural circuit.
 
+### bistable_decision
+
+Performs parameter sweep.
+
 ### functions
 
 Generates some of the functions of a CRIREL circuit.
 
-### large-network
+### large_network
 
 Generates a 100 neuron network.
 
