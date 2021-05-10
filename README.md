@@ -34,6 +34,7 @@
       <a href="#usage">Usage</a>
       <ul>
         <li><a href="#flysim">flysim</a></li>
+        <li><a href="#dynalysis">dynalysis</a></li>
         <li><a href="#equilibrium_points">equilibrium_points</a></li>
         <li><a href="#CPG">CPG</a></li>
         <li><a href="#bistable_decision">bistable_decision</a></li>
@@ -59,29 +60,49 @@ In the face of a complex environment, it is necessary for neural circuits to dev
 
 ### flysim
 
-Flysim is the open-sourced neural network simulator used in this project. It takes two files as input: (1) a configuration file, where the connectome of the neural network is specified, and (2) a protocol file, where the stimulus given is specified. Further specifications, such as neuonal model or numerical method, can be found by ``./flysim.out -h``. In this project, we use:
+Flysim is an open-sourced neural network simulator that runs on linux. It takes two files as input: (1) a configuration file, where the connectome of the neural network is specified, and (2) a protocol file, where the stimulus given is specified. Further specifications, such as neuonal models or numerical methods, can be found by ``./flysim.out -h``. In this project, we use:
+
 ``./flysim.out -pro <protocol-file> -conf <configuration-file> -s moderate - nmodel LIF``
+
 Link to its published paper: https://www.frontiersin.org/10.3389/conf.fninf.2014.18.00043/event_abstract
+
+(Note: currently, only version 6 is open-sourced. The execution file in this folder is version 7.21.)
+
+### dynalysis
+
+Contains useful modules for simulation and analysis.
+
+``gen_pro``: generates protocol file.
+
+``gen_conf``: generates configuration files.
+
+``classes``: includes some commonly used classes. In particular, class ``motif`` generates small neuronal circuits when the ID is given. See how to specify circuit ID here:
 
 ### equilibrium_points
 
-Performs parameter sweep for a given neural circuit. Run --- to generate .pro and .conf files, ``./ss_flysim.sh`` to run flysim, ---.
+To access the complexity of the dynamical system, we counted the number of equilibrium points across a wide range of parameters. For a given neural circuit, it iterates through the parameter space, and for each parameter set it explores the phase space by stimulating the circuit differently in time. 
+
+To generate the .pro (protocol file) and .conf (configuration file) files required for simulation, adjust the circuit ID in ``mkfiles.py``, and run the file.
+
+Go to the generated file, and run ``./ss_flysim.sh``.
+
+To obtain the analysis of the results, run ``python analysis.py``.
 
 ### CPG
 
-Performs parameter sweep for a given neural circuit.
+To access the complexity of the dynamical system, we counted the number of central pattern generators (CPG) across a wide range of parameters. For a given neural circuit, it iterates through the parameter space, and determines whether a parameter set is capable of oscillation by analyzing its inter-spike interval (ISI).
 
 ### bistable_decision
 
-Performs parameter sweep.
+Determines whether a circuit is capable of performing the functions switch (called bistable here) and decision-making.
 
 ### functions
 
-Generates some of the functions of a CRIREL circuit.
+Simulates the functions of a CRIREL circuit.
 
 ### large_network
 
-Generates a 100 neuron network.
+Generates a neural network containing 100 neurons.
 
 <!-- ROADMAP -->
 ## Roadmap
