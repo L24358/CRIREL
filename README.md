@@ -30,7 +30,6 @@
   <summary><h2 style="display: inline-block">Table of Contents</h2></summary>
   <ol>
     <li><a href="#about-the-project">About The Project</a></li>
-    <li><a href="#getting-started">Getting Started</a></li>
     <li>
       <a href="#usage">Usage</a>
       <ul>
@@ -53,20 +52,16 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-In the face of a complex environment, it is necessary for neural circuits to develop a “Swiss army knife” toolkit, in which neural networks flexibly switch between different functionalities to meet the demands placed on them. Here, we develop a theoretical framework for how recurrent circuits give rise to this flexibility. More-over, mutual inhibition, an abundant yet less studied structure, is critical in expanding the functionality of the network, far beyond what feedback inhibition alone can accomplish. Using dynamical systems theory, we show that mutual inhibition doubles the number of cusp bifurcations in small neural circuits. As a concrete example, we build a class of functional motifs we call Coupled Recurrent Inhibitory and Recurrent Excitatory Loops (CRIRELs). These CRIRELs have the advantage of being multi-functional, performing a plethora of functions, including decisions, memory, toggle, etc. Finally, we demonstrate how this trend holds for larger networks.
-
-
-<!-- GETTING STARTED -->
-## Getting Started
-
-TBC.
+In the face of a complex environment, it is necessary for neural circuits to develop a “Swiss army knife” toolkit, in which neural networks flexibly switch between different functionalities to meet the demands placed on them. Here, we develop a theoretical framework for how recurrent circuits give rise to this flexibility. Moreover, mutual inhibition, an abundant yet less studied structure, is critical in expanding the functionality of the network, far beyond what feedback inhibition alone can accomplish. Using dynamical systems theory, we show that mutual inhibition doubles the number of cusp bifurcations in small neural circuits. As a concrete example, we build a class of functional motifs we call Coupled Recurrent Inhibitory and Recurrent Excitatory Loops (CRIRELs). These CRIRELs have the advantage of being multi-functional, performing a plethora of functions, including decisions, memory, toggle, etc. Finally, we demonstrate how this trend holds for larger networks.
 
 <!-- USAGE EXAMPLES -->
 ## Usage
 
 ### flysim
 
-Neural network simulator: https://www.frontiersin.org/10.3389/conf.fninf.2014.18.00043/event_abstract
+Flysim is the open-sourced neural network simulator used in this project. It takes two files as input: (1) a configuration file, where the connectome of the neural network is specified, and (2) a protocol file, where the stimulus given is specified. Further specifications, such as neuonal model or numerical method, can be found by ``./flysim.out -h``. In this project, we use:
+``./flysim.out -pro <protocol-file> -conf <configuration-file> -s moderate - nmodel LIF``
+Link to its published paper: https://www.frontiersin.org/10.3389/conf.fninf.2014.18.00043/event_abstract
 
 ### equilibrium_points
 
