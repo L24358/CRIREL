@@ -66,18 +66,17 @@ Flysim is an open-sourced neural network simulator that runs on linux. It takes 
 Link to its published paper: https://www.frontiersin.org/10.3389/conf.fninf.2014.18.00043/event_abstract \
 (Note: currently, only version 6 is open-sourced. The execution file in this folder is version 7.21.)
 
-Other files in this folder are shell scripts for executing ``flysim.out`` recursively.\
-- ``ss_flysim_iter=0``: runs flysim in current directory.\
-- ``ss_flysim_iter=1``: runs flysim in all first-level sub-directories.\
+Other files in this folder are shell scripts for executing ``flysim.out`` recursively.
+- ``ss_flysim_iter=0``: runs flysim in current directory.
+- ``ss_flysim_iter=1``: runs flysim in all first-level sub-directories.
 - ``ss_flysim_iter=2``: runs flysim in all second-level sub-directories.
 
 ### dynalysis
 
 Contains useful modules for simulation and analysis.
-
-``gen_pro``: generates protocol file.\
-``gen_conf``: generates configuration files.\
-``classes``: includes some commonly used classes. In particular, class ``motif`` generates small neuronal circuits when the ID is given. See how to specify circuit ID here:
+- ``gen_pro``: generates protocol file.
+- ``gen_conf``: generates configuration files.
+- ``classes``: includes some commonly used classes. In particular, class ``motif`` generates small neuronal circuits when the ID is given. See how to specify circuit ID here:
 
 ### equilibrium_points
 
