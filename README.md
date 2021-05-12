@@ -67,9 +67,9 @@ Link to its published paper: https://www.frontiersin.org/10.3389/conf.fninf.2014
 (Note: currently, only version 6 is open-sourced. The execution file in this folder is version 7.21.)
 
 Other files in this folder are shell scripts for executing ``flysim.out`` recursively.\
-``ss_flysim_iter=0``: runs flysim in current directory.\
-``ss_flysim_iter=1``: runs flysim in all first-level sub-directories.\
-``ss_flysim_iter=2``: runs flysim in all second-level sub-directories.
+- ``ss_flysim_iter=0``: runs flysim in current directory.\
+- ``ss_flysim_iter=1``: runs flysim in all first-level sub-directories.\
+- ``ss_flysim_iter=2``: runs flysim in all second-level sub-directories.
 
 ### dynalysis
 
