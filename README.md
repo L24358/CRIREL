@@ -61,15 +61,10 @@ In the face of a complex environment, it is necessary for neural circuits to dev
 ### flysim
 
 Flysim is an open-sourced neural network simulator that runs on linux. It takes two files as input: (1) a configuration file, where the connectome of the neural network is specified, and (2) a protocol file, where the stimulus given is specified. Further specifications, such as neuonal models or numerical methods, can be found by ``./flysim.out -h``. In this project, we use:\
-``./flysim.out -pro <protocol-file> -conf <configuration-file> -s moderate - nmodel LIF``
+``./flysim.out -pro <protocol-file> -conf <configuration-file> -s moderate - nmodel LIF``, as shown in ``run_flysim.sh``.
 
 Link to its published paper: https://www.frontiersin.org/10.3389/conf.fninf.2014.18.00043/event_abstract \
 (Note: currently, only version 6 is open-sourced. The execution file in this folder is version 7.21.)
-
-Other files in this folder are shell scripts for executing ``flysim.out`` recursively.
-- ``ss_flysim_iter=0``: runs flysim in current directory.
-- ``ss_flysim_iter=1``: runs flysim in all first-level sub-directories.
-- ``ss_flysim_iter=2``: runs flysim in all second-level sub-directories.
 
 ### dynalysis
 
