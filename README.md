@@ -33,8 +33,8 @@
     <li>
       <a href="#usage">Usage</a>
       <ul>
-        <li><a href="#Neural Circuit and Simulation Protocol">Neural Circuit and Simulation Protocol</a></li>
-        <li><a href="#Simulation Tool: Flysim">Simulation Tool: Flysim</a></li>
+        <li><a href="#neural-circuit-and-simulation-protocol">Neural Circuit and Simulation Protocol</a></li>
+        <li><a href="#simulation-tool-flysim">Simulation Tool: Flysim</a></li>
         <li><a href="#CPG">CPG</a></li>
         <li><a href="#bistable_decision">bistable_decision</a></li>
         <li><a href="#functions">functions</a></li>
