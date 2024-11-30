@@ -33,12 +33,8 @@
     <li>
       <a href="#usage">Usage</a>
       <ul>
-        <li><a href="#neural-circuit-and-simulation-protocol">Neural Circuit and Simulation Protocol</a></li>
         <li><a href="#simulation-tool-flysim">Simulation Tool: Flysim</a></li>
-        <li><a href="#CPG">CPG</a></li>
-        <li><a href="#bistable_decision">bistable_decision</a></li>
-        <li><a href="#functions">functions</a></li>
-        <li><a href="#large_network">large_network</a></li>
+        <li><a href="#neural-circuit-and-simulation-protocol">Neural Circuit and Simulation Protocol</a></li>
       </ul>
     </li>
     <li><a href="#roadmap">Roadmap</a></li>
@@ -57,44 +53,19 @@ In the face of a complex environment, it is necessary for neural circuits to dev
 <!-- USAGE EXAMPLES -->
 ## Usage
 
-### Neural Circuit and Simulation Protocol
+### Simulation Tool: Flysim
 
-Flysim is an open-sourced neural network simulator that runs on linux. It takes two files as input: (1) a configuration file, where the connectome of the neural network is specified, and (2) a protocol file, where the stimulus given is specified. Further specifications, such as neuonal models or numerical methods, can be found by ``./flysim.out -h``. In this project, we use:\
-``./flysim.out -pro <protocol-file> -conf <configuration-file> -s moderate - nmodel LIF``,\
-as shown in ``run_flysim.sh``.
+Flysim is an open-sourced neural network simulator that runs on linux. It takes two files as input: (1) a configuration file (``.conf``), where the connectome of the neural circuit is specified, and (2) a protocol file (``.pro``), where the stimulus given is specified. Further specifications, such as neuonal models or numerical methods, can be found by ``./flysim.out -h``. In this project, we use:\
+``./flysim.out -pro <protocol-file> -conf <configuration-file> -s moderate - nmodel LIF``.
 
 Link to its published paper: https://www.frontiersin.org/10.3389/conf.fninf.2014.18.00043/event_abstract \
 (Note: currently, only version 6 is open-sourced. The execution file in this folder is version 7.21.)
 
-### Simulation Tool: Flysim
+### Neural Circuit and Simulation Protocol
 
-Contains useful modules for simulation and analysis.
-- ``gen_pro``: generates protocol file.
-- ``gen_conf``: generates configuration files.
-- ``classes``: includes some commonly used classes. In particular, class ``motif`` generates small neuronal circuits when the ID is given.
+In this project, generation of the .conf file can be done through the ``exec_conf`` function in ``code/dynalysis/gen_conf.py`` by specifying the neural circuit ID (and other optional adjustments). Generation of the .pro file is similarly executed through ``exec_pro`` in ``code/dynalysis/gen_pro.py``. For detailed description of the parameters involved, please see the documentation for Flysim.
 
-### equilibrium_points
-
-To access the complexity of the dynamical system, we counted the number of equilibrium points across a wide range of parameters. For a given neural circuit, it iterates through the parameter space, and for each parameter set it explores the phase space by stimulating the circuit differently in time. 
-
-To generate the .pro (protocol file) and .conf (configuration file) files required for simulation, adjust the circuit ID in ``mkfiles.py``, and run the file.\
-Go to the generated file, and run the flysim shell script.\
-
-### CPG
-
-To access the complexity of the dynamical system, we counted the number of central pattern generators (CPG) across a wide range of parameters. For a given neural circuit, it iterates through the parameter space, and determines whether a parameter set is capable of oscillation by analyzing its inter-spike interval (ISI).
-
-### bistable_decision
-
-Determines whether a circuit is capable of performing the functions switch (called bistable here) and decision-making.
-
-### functions
-
-Simulates the functions of a CRIREL circuit. Scripts for generating .pro and .conf files, as well as the generated data (in firing rates), are contained within this folder.
-
-### large_network
-
-Generates a neural network containing 100 neurons.
+The scripts that call the execution functions for each of the results (and thus specifies the parameters) are given in the ``code/fig*/`` folders. Raw simulation outputs are provided in ``results/``. 
 
 <!-- ROADMAP -->
 ## Roadmap
