@@ -33,9 +33,8 @@
     <li>
       <a href="#usage">Usage</a>
       <ul>
-        <li><a href="#flysim">flysim</a></li>
-        <li><a href="#dynalysis">dynalysis</a></li>
-        <li><a href="#equilibrium_points">equilibrium_points</a></li>
+        <li><a href="#Neural Circuit and Simulation Protocol">Neural Circuit and Simulation Protocol</a></li>
+        <li><a href="#Simulation Tool: Flysim">Simulation Tool: Flysim</a></li>
         <li><a href="#CPG">CPG</a></li>
         <li><a href="#bistable_decision">bistable_decision</a></li>
         <li><a href="#functions">functions</a></li>
@@ -58,7 +57,7 @@ In the face of a complex environment, it is necessary for neural circuits to dev
 <!-- USAGE EXAMPLES -->
 ## Usage
 
-### flysim
+### Neural Circuit and Simulation Protocol
 
 Flysim is an open-sourced neural network simulator that runs on linux. It takes two files as input: (1) a configuration file, where the connectome of the neural network is specified, and (2) a protocol file, where the stimulus given is specified. Further specifications, such as neuonal models or numerical methods, can be found by ``./flysim.out -h``. In this project, we use:\
 ``./flysim.out -pro <protocol-file> -conf <configuration-file> -s moderate - nmodel LIF``,\
@@ -67,7 +66,7 @@ as shown in ``run_flysim.sh``.
 Link to its published paper: https://www.frontiersin.org/10.3389/conf.fninf.2014.18.00043/event_abstract \
 (Note: currently, only version 6 is open-sourced. The execution file in this folder is version 7.21.)
 
-### dynalysis
+### Simulation Tool: Flysim
 
 Contains useful modules for simulation and analysis.
 - ``gen_pro``: generates protocol file.
@@ -112,7 +111,7 @@ Distributed under the MIT License. See `LICENSE` for more information.
 <!-- CONTACT -->
 ## Contact
 
-Belle (Pei-Hsien) Liu - belle.l24358@gmail.com
+Belle (Pei-Hsien) Liu - belleliu@uw.edu
 
 Project Link: [https://github.com/L24358/CRIREL](https://github.com/L24358/CRIREL)
 
